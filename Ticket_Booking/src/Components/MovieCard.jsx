@@ -18,12 +18,11 @@ const MovieCard = ({ movie }) => {
       />
       <p className='font-semibold mt-2 truncate'>{movie.title}</p>
       <p className='text-sm text-gray-400 mt-2'>
-        {new Date(movie.release_date).getFullYear()}.
-        {movie.genres?.slice(0, 2).map(genre => genre.name).join('|')}.
-        {movie.run}
+        {new Date(movie.release_date).getFullYear()} • {movie.genres.slice(0, 2).map(genre => genre.name).join(" | ")}
       </p>
+
       <div className='flex items-center justify-between mt-4 pb-3'>
-        <button
+        <button 
           onClick={() => {
             navigate(`/movies/${movie._id}`);
             scrollTo(0, 0);
