@@ -19,7 +19,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/movies' element={<Movies/>}/>
-        <Route path='/mmovies/:id' element={<MovieDetails/>}/>
+        <Route path='/movies/:id' element={<MovieDetails/>}/>
+        
         <Route path='/movies/:id/:date' element={<SeatLayout/>}/>
         <Route path='/my-booking' element={<MyBooking/>}/>
         <Route path='/Favorite' element={<Favorite/>}/>
