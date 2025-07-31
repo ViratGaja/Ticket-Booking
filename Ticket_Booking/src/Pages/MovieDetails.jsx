@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { dummyDateTimeData, dummyShowsData } from '../assets/assets'
 import BlurCircle from '../Components/BlurCircile'
 import { Heart, PlayCircleIcon, StarIcon } from 'lucide-react'
+import DataSelect from '../Components/DataSelect'
 
 const MovieDetails = () => {
   const { id } = useParams()
@@ -85,6 +86,8 @@ const MovieDetails = () => {
 
 
       </div>
+      <DataSelect  dateTime={show.dateTime} id={id}/>
+      
     </div>
   ) : (
     <div className='text-center mt-10 text-lg'>Loading...</div>
